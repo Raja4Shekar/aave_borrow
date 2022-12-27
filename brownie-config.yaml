@@ -1,0 +1,29 @@
+depedencies:
+  - aave/protocol-v2@1.0.1
+compiler:
+  solc:
+    remappings:
+      - '@aave=aave/protocol-v2@1.0.1'
+networks:
+  default: mainnet-fork
+  development:
+    keyhash: '0x0476f9a745b61ea5c0ab224d3a6e4c99f0b02fce4da01143a4f70aa80ae76e8a'
+    fee: 100000000000000000
+  goerli:
+    vrf_coordinator: '0x2bce784e69d2Ff36c71edcB9F88358dB0DfB55b4'
+    eth_usd_price_feed: '0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e'
+    link_token: '0x326C977E6efc84E512bB9C30f76E30c160eD06FB'
+    keyhash: '0x0476f9a745b61ea5c0ab224d3a6e4c99f0b02fce4da01143a4f70aa80ae76e8a'
+    fee: 100000000000000000
+    verify: True
+    weth_token: '0xcca7d1416518d095e729904aaea087dba749a4dc'
+    lending_pool_addresses_provider: '0x5E52dEc931FFb32f609681B8438A51c675cc232d'
+    dai_token: '0x75Ab5AB1Eef154C0352Fc31D2428Cef80C7F8B33'
+  mainnet-fork:
+    eth_usd_price_feed: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+    weth_token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+    lending_pool_addresses_provider: '0xb53c1a33016b2dc2ff3653530bff1848a515c8c5'
+    dai_token: '0x6B175474E89094C44Da98b954EedeAC495271d0F'
+wallets:
+  from_key: ${PRIVATE_KEY}
+dotenv: .env
